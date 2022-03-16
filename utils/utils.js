@@ -7,6 +7,6 @@ export function getDate() {
   let mm = today.getMonth();
   let yyyy = today.getFullYear();
 
-  today = dd + ' ' + MONTHS[mm] + ' ' + yyyy;
+  today = MONTHS[mm]  + ' ' + dd + ', ' + yyyy;
   return today;
 }
