@@ -57,7 +57,7 @@ const Home: NextPage = () => {
           <Service name={"Design Editor"} status={Normal}/>
           <Service name={"Link Pages"} status={Normal}/>
           <Service name={"Online Menus"} status={Normal}/>
-          <Service name={"QR Codes"} status={Normal}/>
+          <Service name={"QR Codes"} status={Outage}/>
         </div>
       </main>
 
