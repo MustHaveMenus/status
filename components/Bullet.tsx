@@ -1,7 +1,10 @@
+import {Status} from "../utils/Status";
+import {getStatusClass} from "../utils/utils";
+
 export interface BulletProps {
-  type: string;
+  status: Status;
 }
 
-export function Bullet({type}: BulletProps) {
-  return <span className={`bullet ${type}`} />;
+export function Bullet({status}: BulletProps) {
+  return <span className={`bullet ${getStatusClass(status)}`} />;
 }

@@ -1,13 +1,14 @@
 import {Bullet} from "./Bullet";
+import {Status} from "../utils/Status";
 
 export interface ServiceProps {
   name: string;
-  status: string;
+  status: Status;
 }
 
 export function Service({name, status}: ServiceProps) {
   return <div className={"row"}>
     <span>{name}</span>
-    <span><Bullet type={status}/></span>
+    <span><Bullet status={status}/></span>
   </div>;
 }

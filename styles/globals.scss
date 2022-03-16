@@ -24,6 +24,11 @@
   font-weight: 300;
 }
 
+$blue: #3f9df6;
+$green: #66ca1f;
+$yellow: #f0bd11;
+$red: #f00;
+
 html,
 body {
   padding: 0;
@@ -63,19 +68,19 @@ a {
   align-self: center;
 
   &.green {
-    background: #66ca1f;
+    background: $green;
   }
 
   &.blue {
-    background: #3f9df6;
+    background: $blue;
   }
 
   &.yellow {
-    background: #f0bd11;
+    background: $yellow;
   }
 
   &.red {
-    background: #ff0000;
+    background: $red;
   }
 }
 
@@ -130,18 +135,58 @@ section {
   }
 
   &.general {
-    background: #f6ffed;
-    border: 1px solid #b7eb8f;
     margin: 30px 0;
 
-    h3 {
-      color: #66ca1f;
+    header {
+      display: flex;
+      width: 100%;
+
+      & > label {
+        margin-left: auto;
+      }
+    }
+
+    p {
+      margin: 20px 0 0 ;
+      font-size: 18px;
     }
 
     label {
       margin-left: auto;
-      color: #66ca1f;
       font-size: 15px;
+    }
+
+    &.green {
+      background: #f6ffed;
+      border: 1px solid #b7eb8f;
+
+      h3, label, p {
+        color:$green;
+      }
+    }
+
+    &.blue {
+      background: #edf2ff;
+      border: 1px solid #8fb2eb;
+      h3, label, p {
+        color: $blue;
+      }
+    }
+
+    &.yellow {
+      background: #fffbed;
+      border: 1px solid #ebcc8f;
+      h3, label, p {
+        color: $yellow;
+      }
+    }
+
+    &.red {
+      background: #ffeded;
+      border: 1px solid #eb8f8f;
+      h3, label, p {
+        color: $red;
+      }
     }
   }
 }

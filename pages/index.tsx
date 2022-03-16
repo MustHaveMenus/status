@@ -1,12 +1,20 @@
 import type {NextPage} from 'next'
 import Head from 'next/head'
 import {Logo} from "../components/Logo";
-import {getDate} from "../utils/utils";
 import {Bullet} from "../components/Bullet";
 import {Service} from "../components/Service";
+import {GeneralNotice} from "../components/GeneralNotice";
+import {Status} from "../utils/Status";
+import {useEffect} from "react";
+import {initIntercom} from "../services/intercomService";
+
+const {Normal, Information, Partial, Outage} = Status;
 
 const Home: NextPage = () => {
 
+  useEffect(() => {
+    initIntercom();
+  }, [])
 
   return (
     <div className={"container"}>
@@ -26,18 +34,17 @@ const Home: NextPage = () => {
           </div>
         </header>
 
-        <section className={"general"}>
-          <h3>All Systems are Operational</h3>
-          <label>Last checked on {getDate()}</label>
-        </section>
+        <GeneralNotice showInfo={false} status={Status.Normal} title={"Scheduled Maintanance"}>
+          This is some info. Make sure the showInfo property is set to true to display this.
+        </GeneralNotice>
 
         <section className={"agenda"}>
           <h3>Current Status</h3>
           <ul>
-            <li><Bullet type={"green"}/><label>Normal</label></li>
-            <li><Bullet type={"blue"}/><label>Information</label></li>
-            <li><Bullet type={"yellow"}/><label>Partial Outage</label></li>
-            <li><Bullet type={"red"}/><label>Outage</label></li>
+            <li><Bullet status={Normal}/><label>Normal</label></li>
+            <li><Bullet status={Information}/><label>Information</label></li>
+            <li><Bullet status={Partial}/><label>Partial Outage</label></li>
+            <li><Bullet status={Outage}/><label>Outage</label></li>
           </ul>
         </section>
 
@@ -46,11 +53,11 @@ const Home: NextPage = () => {
             <span>Service</span>
             <span>Status</span>
           </div>
-          <Service name={"Basic Services"} status={"green"}/>
-          <Service name={"Design Editor"} status={"green"}/>
-          <Service name={"Link Pages"} status={"green"}/>
-          <Service name={"Online Menus"} status={"green"}/>
-          <Service name={"QR Codes"} status={"green"}/>
+          <Service name={"Basic Services"} status={Normal}/>
+          <Service name={"Design Editor"} status={Normal}/>
+          <Service name={"Link Pages"} status={Normal}/>
+          <Service name={"Online Menus"} status={Normal}/>
+          <Service name={"QR Codes"} status={Normal}/>
         </div>
       </main>
 
