@@ -42,7 +42,7 @@ const Home: NextPage = () => {
           <h3>Current Status</h3>
           <ul>
             <li><Bullet status={Normal}/><label>Normal</label></li>
-            <li><Bullet status={Information}/><label>Information</label></li>
+            <li><Bullet status={Information}/><label>Info</label></li>
             <li><Bullet status={Partial}/><label>Partial Outage</label></li>
             <li><Bullet status={Outage}/><label>Outage</label></li>
           </ul>

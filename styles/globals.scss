@@ -28,6 +28,7 @@ $blue: #3f9df6;
 $green: #66ca1f;
 $yellow: #f0bd11;
 $red: #f00;
+$minWidth: 400px;
 
 html,
 body {
@@ -85,7 +86,7 @@ a {
 }
 
 section {
-  min-width: 425px;
+  min-width: $minWidth;
   max-width: 600px;
   width: 50%;
   display: flex;
@@ -206,7 +207,7 @@ section {
 }
 
 .table {
-  min-width: 425px;
+  min-width: $minWidth;
   max-width: 600px;
   width: 50%;
   margin-top: 30px;
@@ -250,6 +251,20 @@ section {
     &.agenda {
       ul {
         margin: 10px auto 0;
+      }
+    }
+
+    &.general {
+      header {
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        h3 {
+          text-align: center;
+        }
+        & > label {
+          margin: 10px auto 0;
+        }
       }
     }
   }
