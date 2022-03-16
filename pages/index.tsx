@@ -34,7 +34,7 @@ const Home: NextPage = () => {
           </div>
         </header>
 
-        <GeneralNotice showInfo={false} status={Status.Normal} title={"Scheduled Maintanance"}>
+        <GeneralNotice showInfo={false} status={Status.Normal} title={"All systems running"}>
           This is some info. Make sure the showInfo property is set to true to display this.
         </GeneralNotice>
 
