@@ -28,7 +28,7 @@ $blue: #3f9df6;
 $green: #66ca1f;
 $yellow: #f0bd11;
 $red: #f00;
-$minWidth: 400px;
+$minWidth: 320px;
 
 html,
 body {
@@ -88,7 +88,7 @@ a {
 section {
   min-width: $minWidth;
   max-width: 600px;
-  width: 50%;
+  width: 90%;
   display: flex;
   align-items: center;
   border-radius: 5px;
@@ -111,20 +111,14 @@ section {
       list-style-type: none;
       margin: 0 0 0 auto;
       padding: 0;
+      flex-wrap: wrap;
 
       li {
         display: flex;
         align-items: center;
-        margin: 0 8px;
+        margin: 0 6px;
         white-space: break-spaces;
-
-        &:first-child {
-          margin-left: 0;
-        }
-
-        &:last-child {
-          margin-right: 0;
-        }
+        letter-spacing: -.25px;
 
         label {
           white-space: nowrap;
@@ -209,7 +203,7 @@ section {
 .table {
   min-width: $minWidth;
   max-width: 600px;
-  width: 50%;
+  width: 90%;
   margin-top: 30px;
 
   .row {
@@ -240,7 +234,7 @@ section {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   section {
     flex-direction: column;
 
