@@ -24,6 +24,10 @@ const Home: NextPage = () => {
         <link rel="icon" type="image/png" href="https://www.musthavemenus.com//favicon-32x32.png" sizes="32x32"/>
         <link rel="icon" type="image/png" href="https://www.musthavemenus.com//favicon-96x96.png" sizes="96x96"/>
         <link rel="icon" type="image/png" href="https://www.musthavemenus.com//favicon-160x160.png" sizes="160x160"/>
+
+        <meta name="description" content="Design eye-catching menus fast with our easy online menu maker and quality menu printing services."/>
+        <meta name="keywords" content="menu design, menu maker, menu printing"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
       </Head>
 
       <main className={"main"}>
