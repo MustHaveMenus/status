@@ -12,6 +12,14 @@ export function getDate(): string {
   return MONTHS[mm]  + ' ' + dd + ', ' + yyyy;
 }
 
+export function getTime(): string {
+  const hours = new Date().getHours();
+  if (hours > 20) return "8:00PM";
+  if (hours > 16) return "4:00PM";
+  if (hours > 12) return "12:00PM";
+  return "9:00AM";
+}
+
 export function getStatusClass(status: Status): string {
   if (status === Status.Information) return "blue";
   if (status === Status.Partial) return "yellow";

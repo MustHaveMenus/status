@@ -1,4 +1,4 @@
-import {getDate, getStatusClass} from "../utils/utils";
+import {getDate, getStatusClass, getTime} from "../utils/utils";
 import {Status} from "../utils/Status";
 
 export interface GeneralNoticeProps {
@@ -12,7 +12,7 @@ export function GeneralNotice({status, showInfo, title, children}: GeneralNotice
   return <section className={`general ${getStatusClass(status)}`}>
     <header>
       <h3>{title}</h3>
-      <label>Last checked on {getDate()}</label>
+      <label>Last checked on {getDate()} at {getTime()}</label>
     </header>
     {showInfo && children && <p>{children}</p>}
   </section>
