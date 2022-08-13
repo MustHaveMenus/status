@@ -62,7 +62,7 @@ const Home: NextPage = () => {
           </div>
         </header>
 
-        <GeneralNotice showInfo={false} status={Status.Partial} title={"Partial outage"}>
+        <GeneralNotice showInfo={false} status={Status.Normal} title={"All systems stable"}>
           This is some info. Make sure the showInfo property is set to true to display this.
         </GeneralNotice>
 
@@ -81,7 +81,7 @@ const Home: NextPage = () => {
             <span>Service</span>
             <span>Status</span>
           </div>
-          <Service name={"Basic Services"} status={Partial}/>
+          <Service name={"Basic Services"} status={Normal}/>
           <Service name={"Design Editor"} status={Normal}/>
           <Service name={"Link Pages"} status={Normal}/>
           <Service name={"Online Menus"} status={Normal}/>
