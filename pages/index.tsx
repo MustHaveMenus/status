@@ -81,7 +81,7 @@ const Home: NextPage = () => {
             <span>Service</span>
             <span>Status</span>
           </div>
-          <Service name={"Basic Services"} status={Normal}/>
+          <Service name={"Basic Services"} status={Partial}/>
           <Service name={"Design Editor"} status={Normal}/>
           <Service name={"Link Pages"} status={Normal}/>
           <Service name={"Online Menus"} status={Normal}/>
