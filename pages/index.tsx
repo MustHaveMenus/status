@@ -62,7 +62,7 @@ const Home: NextPage = () => {
           </div>
         </header>
 
-        <GeneralNotice showInfo={false} status={Status.Partial} title={"Partial Outage"}>
+        <GeneralNotice showInfo={true} status={Status.Partial} title={"Partial Outage"}>
           An issue with our ISP is causing slowness on our site. They are working to resolve. Thanks for your patience!
         </GeneralNotice>
 
