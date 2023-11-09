@@ -62,8 +62,8 @@ const Home: NextPage = () => {
           </div>
         </header>
 
-        <GeneralNotice showInfo={false} status={Status.Normal} title={"All systems stable"}>
-          All systems stable
+        <GeneralNotice showInfo={true} status={Status.Partial} title={"Partial Outage"}>
+          An issue with our ISP is causing slowness on our site. They are working to resolve. Thanks for your patience!
         </GeneralNotice>
 
         <section className={"agenda"}>
@@ -81,11 +81,11 @@ const Home: NextPage = () => {
             <span>Service</span>
             <span>Status</span>
           </div>
-          <Service name={"Basic Services"} status={Normal}/>
-          <Service name={"Design Editor"} status={Normal}/>
-          <Service name={"Link Pages"} status={Normal}/>
-          <Service name={"Online Menus"} status={Normal}/>
-          <Service name={"QR Codes"} status={Normal}/>
+          <Service name={"Basic Services"} status={Partial}/>
+          <Service name={"Design Editor"} status={Partial}/>
+          <Service name={"Link Pages"} status={Partial}/>
+          <Service name={"Online Menus"} status={Partial}/>
+          <Service name={"QR Codes"} status={Partial}/>
         </div>
       </main>
 
